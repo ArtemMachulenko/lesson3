@@ -8,13 +8,13 @@ import {Comment} from "../../models/Comment";
 })
 export class CommentService {
 
-  constructor(private HttpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   getComments(): Observable<Comment[]> {
-    return this.HttpClient.get<Comment[]>('https://jsonplaceholder.typicode.com/comments');
+    return this.httpClient.get<Comment[]>('https://jsonplaceholder.typicode.com/comments');
   }
 
   getCommentsByPostId(postId: string): Observable<Comment[]> {
-    return this.HttpClient.get<Comment[]>(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`);
+    return this.httpClient.get<Comment[]>(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`);
   }
 }
