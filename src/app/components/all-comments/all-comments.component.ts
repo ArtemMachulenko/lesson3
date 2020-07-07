@@ -9,8 +9,8 @@ import {Comment} from "../../models/Comment";
 })
 export class AllCommentsComponent implements OnInit {
   comments: Comment[];
-  constructor(private CommentService: CommentService) {
-    this.CommentService.getComments().subscribe(data => {
+  constructor(private commentService: CommentService) {
+    this.commentService.getComments().subscribe(data => {
       this.comments = data;
     });
   }
