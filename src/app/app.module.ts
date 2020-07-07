@@ -34,6 +34,7 @@ import { UserPostCommentsComponent } from './components/user-post-comments/user-
       {path: 'users/:userId/posts', component: UserPostsComponent},
       {path: 'comments', component: AllCommentsComponent},
       {path: 'users/:userId/posts/:postId/comments', component: UserPostCommentsComponent},
+      {path: 'posts/:postId/comments', component: UserPostCommentsComponent}
     ])
   ],
   providers: [],
