@@ -10,8 +10,8 @@ import {User} from "../../models/User";
 export class AllUsersComponent implements OnInit {
   users: User[];
 
-  constructor(private UserService: UserService) {
-    this.UserService.getUsers().subscribe(data => {
+  constructor(private userService: UserService) {
+    this.userService.getUsers().subscribe(data => {
       this.users = data;
     });
   }

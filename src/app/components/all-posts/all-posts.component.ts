@@ -9,8 +9,8 @@ import {Post} from "../../models/Post";
 })
 export class AllPostsComponent implements OnInit {
   posts: Post[];
-  constructor(private PostService: PostService) {
-    this.PostService.getPosts().subscribe(data => {
+  constructor(private postService: PostService) {
+    this.postService.getPosts().subscribe(data => {
       this.posts = data;
     });
   }

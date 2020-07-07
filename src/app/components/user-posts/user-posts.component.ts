@@ -13,14 +13,14 @@ export class UserPostsComponent implements OnInit {
   userId: string;
 
   constructor(
-    private PostService: PostService,
+    private postService: PostService,
     private activatedRoute: ActivatedRoute) {
 
     this.activatedRoute.params.subscribe(data => {
       this.userId = data.userId;
     });
 
-    this.PostService.getPostsByUserId(this.userId).subscribe(data => {
+    this.postService.getPostsByUserId(this.userId).subscribe(data => {
       this.posts = data;
     });
   }

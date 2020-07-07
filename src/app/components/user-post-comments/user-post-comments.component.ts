@@ -13,13 +13,13 @@ export class UserPostCommentsComponent implements OnInit {
   postId: string;
 
   constructor(
-    private CommentService: CommentService,
+    private commentService: CommentService,
     private activatedRoute: ActivatedRoute) {
     this.activatedRoute.params.subscribe(data => {
       this.postId = data.postId;
     });
 
-    this.CommentService.getCommentsByPostId(this.postId).subscribe(data => {
+    this.commentService.getCommentsByPostId(this.postId).subscribe(data => {
       this.comments = data;
     });
 
